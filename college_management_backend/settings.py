@@ -90,13 +90,27 @@ WSGI_APPLICATION = 'college_management_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'codeman7462$default',  # Your database name
+        'USER': 'codeman7462',  # Your username
+        'PASSWORD': 'your_password_here',  # Replace with your actual password
+        'HOST': 'codeman7462.mysql.eu.pythonanywhere-services.com',  # Your MySQL host
+    }
+}
+
+
+
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -134,7 +148,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'staticfiles')
 
 
 # Default primary key field type
