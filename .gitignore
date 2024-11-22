@@ -1,0 +1,31 @@
+# Python-related
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+db.sqlite3
+venv/
+env/
+*.env
+
+# Django migrations
+migrations/
+
+# React-related
+node_modules/
+build/
+*.log
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Trash folder
+trash/
