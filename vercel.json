@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "college_management_backend/wsgi",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize" : "15mb", "runtime": "python3.10"}
+    }],
+    "routes":[
+        {
+            "src": "/(.*)",
+            "dest": "college_management_backend/wsgi"
+        }
+    ]
+}
